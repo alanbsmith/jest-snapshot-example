@@ -24,6 +24,7 @@
   "author": "Alan Smith <a.bax.smith@gmail.com> (https://github.com/alanbsmith)",
   "license": "MIT",
   "dependencies": {
+    "lodash": "^4.17.4",
     "polished": "^1.8.1",
     "react-fontawesome": "^1.6.1",
     "styled-components": "^2.2.2",
