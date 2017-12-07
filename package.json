@@ -12,7 +12,7 @@
     "lint": "npm run lint:js && npm run lint:style",
     "lint:js": "eslint lib/**; exit 0",
     "lint:js:watch": "esw -w lib/**",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "review": "run-s lint test:clean test test:coverage:report",
     "lint:style": "stylelint -- \"./lib/**/*.js\"",
     "test": "jest lib/**; exit 0",
@@ -25,6 +25,7 @@
   "license": "MIT",
   "dependencies": {
     "polished": "^1.8.1",
+    "react-fontawesome": "^1.6.1",
     "styled-components": "^2.2.2",
     "styled-components-modifiers": "^1.0.1"
   },
