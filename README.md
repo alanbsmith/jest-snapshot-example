@@ -1,16 +1,13 @@
-# Component Library Starter
-_a small starter for building a component library with [styled-components](https://github.com/styled-components/styled-components) 💅_
+# Jest Snapshot Example
+_with [styled-components](https://github.com/styled-components/styled-components) 💅_
 
 ## Overview
-This component lib is set up to use
- [styled-components](https://github.com/styled-components/styled-components),
- [polished](https://github.com/styled-components/polished), and [styled-components-modifiers](https://github.com/Decisiv/styled-components-modifiers) 💅. This
- starter is designed to help you create your own components and easily publish them to npm.
+This is a companion repo for my Medium article.
 
 ## Up & Running
 To install dependencies with Yarn, run:
 ```sh
-$ yarn
+$ yarn install
 ```
 
 or to install with npm, run:
@@ -44,37 +41,6 @@ This library utilizes
  They primarily live in the Element's file and are solely responsible for modifying styles.
  Some modifiers are common to multiple Elements. An example would be `fontWeights`.
  These common modifiers live in `lib/modifiers`
-
-### An Example Structure
-```
-├ lib/
-├── blocks/
-|   ├── Card
-|   |   ├── Body.js     // <- Element
-|   |   ├── Footer.js   // <- Element
-|   |   ├── Header.js   // <- Element
-|   |   └── index.js    // <- Block
-|   └── index.js        // <- export for all Blocks
-├── elements/
-|   ├── A
-|   |   ├── __tests__
-|   |   |   ├── __snapshots__
-|   |   |   |   └── index.js.snap   // <- Snapshot Test
-|   |   |   └── index.js            // <- Test
-|   |   └── index.js                // <- Element
-|   ├── Link
-|   |   └── index.js                // <- Element
-|   ├── H3
-|   |   └── index.js                // <- Element
-|   ├── P
-|   |   └── index.js                // <- Element
-|   └── etc.
-|   └── index.js                    // <- export for all Blocks
-├── modifiers/
-|   ├── fontWeights
-|   └── etc.
-└── index.js                        // <- main export for the library
-```
 
 ## Local Development
 
@@ -123,14 +89,6 @@ $ yarn lint
 ```
 
 ### Testing
-An initial test suite has been setup with two tests (one passing and one intentionally failing).
- We're using Jest Snapshots for our initial test setup, though Enzym and Expect are also available.
- The basic test setup lives in `./__tests__`. The main configuration for Jest lives at the bottom
- of `package.json`.  I've also added a few handy scripts, which I've listed below. Jest also gives
- us a test coverage tool for free, so I've added that too. The setup is at the bottom of
- `package.json`. Everything is set to 90% coverage, but your welcome to update that to whatever
- you'd like.
-
 To run the tests once:
 ```
 $ npm test
@@ -172,26 +130,6 @@ $ npm run build
 Run the watch script:
 ```
 $ npm run build:watch
-```
-
-_**NOTE:** the build script runs in the `prepublish` script just before you publish to npm._
-
-## Publishing
-If you already have an account with npm, you can simply run:
-```
-$ npm login
-$ npm publish
-```
-
-If you don't have an account with npm:
-
-_**NOTE:** Your email address is public_
-```
-$ npm set init.author.name "Your Name"
-$ npm set init.author.email "you@example.com"
-$ npm set init.author.url "http://yourblog.com"
-$ npm adduser
-$ npm publish
 ```
 
 ## Contributing
